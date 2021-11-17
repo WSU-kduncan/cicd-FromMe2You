@@ -10,6 +10,8 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io
 
 ## Build a Container
 
+
+
 ## Run a container
 
-docker run containername
+docker run -it --name containername ubuntu
