@@ -9,7 +9,7 @@
 </head>
 <body bgcolor="red">
 <!-- In order to show the login button -->
-<button onclick="document.getElementById('id01').style.display='block'" style="text-align:center;width:200px;font-size:30px;">Server 2 Login</button>
+<button onclick="document.getElementById('id01').style.display='block'" style="text-align:center;width:200px;font-size:30px;">User Login</button>
 <div id="id01" class="modal">
 
   <form class="modal-content animate" action="/" method="post">
@@ -29,9 +29,9 @@
 var modal = document.getElementById('id01');
 
 window.onclick = function(event) {
-                    if (event.target == modal) {
-                                                        modal.style.display = "none";
-                                                                                        }
+	                    if (event.target == modal) {
+				                                                            modal.style.display = "none";
+											                                                                                            }
 }
 </script>
 </body>
