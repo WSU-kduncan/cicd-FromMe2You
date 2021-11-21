@@ -3,7 +3,7 @@ FROM httpd:2.4
 RUN apt update && apt install -y python3
 #the below command removes any cached subfolders and files
 RUN rm -rf /usr/local/apache2/htdocs/
-#copied new folder
+#copied the updated website folder folder
 COPY ./html/* /usr/local/apache2/htdocs/
 
 EXPOSE 80
