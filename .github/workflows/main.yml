@@ -8,14 +8,14 @@ env:
 jobs:
   push_to_registry:
     name: Push Docker image to Docker Hub
-    runs-on: ubuntu-latest
+    runs-on: ceg3120project6-latest
     steps:
       - name: Check out the repo
-        uses: actions/ceg3120project6@v2
+        uses: actions/checkout@v2
       - name: Push to Docker Hub
         uses: docker/build-push-action@v1
         with:
           username: ${{ secrets.DOCKER_USERNAME }}
-          password: ${{ secrets.ACCESS_TOKEN }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
           repository: ${{ env.DOCKER_HUB_REPO }}
           tag_with_ref: true
