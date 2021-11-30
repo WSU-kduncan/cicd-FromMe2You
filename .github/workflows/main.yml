@@ -4,14 +4,14 @@ on:
     types: [published]
 # creating env instead of hard coding
 env:
-  DOCKER_HUB_REPO: wsukduncan/cicd-FromMe2You
+  DOCKER_HUB_REPO: fromme2you/ceg3120project6
 jobs:
   push_to_registry:
     name: Push Docker image to Docker Hub
     runs-on: ubuntu-latest
     steps:
       - name: Check out the repo
-        uses: actions/checkout@v2
+        uses: actions/ceg3120project6@v2
       - name: Push to Docker Hub
         uses: docker/build-push-action@v1
         with:
