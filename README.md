@@ -37,3 +37,45 @@ sudo docker run -dit --name containername -p 8080:80 -v /home/ubuntu/cicd ubuntu
 ## View in web browser
 
 Type in search bar, type localhost:8080 or private/publicip:8080
+
+# DockerHub
+
+## Create a public repository
+
+After logging into your account, click "Repositories", "Create Repository"
+
+Put in the name of the new repository
+
+Select either public or private visibility
+
+Click the "create" button
+
+## DockerHub CLI
+
+In the terminal, type "docker login --username username"
+
+Enter the password of your DockerHub account
+
+                    or
+
+The authentication token created through your account
+
+To create authentication token, click your account name
+
+"Account Setting", "Security".
+
+Click "Create Access Token"
+
+Type a Description for the token, select the permissions for this token, then click "Create"
+
+You will need to copy the token because it will not appear again
+
+In the GitHub repo that will be connected to Docker, go to settings, secrets.
+
+Click "Add new Secret".
+
+Create one secret labeled "DOCKERHUB_USERNAME", type your DockerHub username
+
+Create a second secret labeled "DOCKERHUB_PASSWORD", either type in the password of your account or paste the access token that Dockerhub provided for you
+
+## GitHub Workflow
