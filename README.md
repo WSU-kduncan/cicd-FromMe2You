@@ -70,12 +70,26 @@ Type a Description for the token, select the permissions for this token, then cl
 
 You will need to copy the token because it will not appear again
 
-In the GitHub repo that will be connected to Docker, go to settings, secrets.
+Sign into your account on Github.com. In the GitHub repo that will be connected to Docker, go to settings, secrets.
 
 Click "Add new Secret".
 
 Create one secret labeled "DOCKERHUB_USERNAME", type your DockerHub username
 
-Create a second secret labeled "DOCKERHUB_PASSWORD", either type in the password of your account or paste the access token that Dockerhub provided for you
+Create a second secret labeled two different ways:
+1. "DOCKERHUB_PASSWORD" and type in the password of your account
+2. "DOCKERHUB_ACCESS_TOKEN" and paste the access token that Dockerhub provided for you
 
 ## GitHub Workflow
+
+In the same github account, click "Actions", "New Workflow", "Create a workflow yourself"
+
+Make sure the DOCKER_HUB_REPO environment variable is set to your DockerHub repo that it will upload to
+
+runs-on is set on the operating system the image will be installed with
+
+User credentials
+- Username: secret name with the username
+- Password: secret name with account password or access token
+
+Tags at the end will pass the docker username and repo as a tag to prevent exposure
