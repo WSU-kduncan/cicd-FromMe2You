@@ -4,6 +4,6 @@ RUN apt update && apt install -y python3
 #the below command removes any cached subfolders and files
 RUN rm -rf /usr/local/apache2/htdocs/
 #copied the updated website folder folder
-COPY ./html/* /usr/local/apache2/htdocs/
+COPY html/ /usr/local/apache2/htdocs/
 
 EXPOSE 80
