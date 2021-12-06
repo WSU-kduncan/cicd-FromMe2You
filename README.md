@@ -96,3 +96,13 @@ Tags at the end will pass the docker username and repo as a tag to prevent expos
 
 
 ${{ secrets.DOCKER_USERNAME }}/${{ env.DOCKER_HUB_REPO }}:latest
+
+# Part 3
+
+sudo docker pull fromme2you/ceg3120project6:latest
+
+sudo docker run -dit --name ownwebserver -p 80:80 fromme2you/ceg3120project6:latest
+
+Screenshot
+
+![Website](WebsiteScreenshot.PNG)
