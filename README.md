@@ -97,6 +97,8 @@ Tags at the end will pass the docker username and repo as a tag to prevent expos
 
 ${{ secrets.DOCKER_USERNAME }}/${{ env.DOCKER_HUB_REPO }}:latest
 
+**NOTE** The .yml file is in the .github/workflows folder
+
 # Part 3
 
 sudo docker pull fromme2you/ceg3120project6:latest
